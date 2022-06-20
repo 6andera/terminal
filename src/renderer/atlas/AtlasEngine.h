@@ -615,7 +615,7 @@ namespace Microsoft::Console::Render
         void _setCellFlags(u16r coords, CellFlags mask, CellFlags bits) noexcept;
         u16x2 _allocateAtlasTile() noexcept;
         void _flushBufferLine();
-        void _emplaceGlyph(IDWriteFontFace* fontFace, size_t bufferPos1, size_t bufferPos2);
+        bool _emplaceGlyph(IDWriteFontFace* fontFace, size_t bufferPos1, size_t bufferPos2);
 
         // AtlasEngine.api.cpp
         void _resolveAntialiasingMode() noexcept;
